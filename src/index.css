@@ -1,4 +1,5 @@
 :root{
+  --bg-color: #171717;
   --primary-color: #40b5cb;
   --secondary-color: #c0df40;
   --tertiary-color: #FF6347;
@@ -33,4 +34,6 @@
 
 body{
   font-family: 'Nunito Regular', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--white-color);
 }
