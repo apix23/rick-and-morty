@@ -1,0 +1,41 @@
+.card{
+    border: 1px solid var(--secondary-color);
+    position: relative;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-bottom: 3.5rem;
+    border-radius: 10px;
+}
+
+
+.card__image{
+    top: -35px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+}
+.card__info{
+    display: flex;
+    gap: 0.5rem;
+}
+.card__info__status{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.card--alive{
+    background-color: green;
+}
+
+.card--dead{
+    background-color: red;
+}
+
+.card--unknown{
+    background-color: grey;
+}

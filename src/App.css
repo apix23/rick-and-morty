@@ -5,3 +5,11 @@
     flex-direction: column;
     padding: 0 2rem;
 }
+
+.layout__cardsContainer{
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(auto-fit, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+}
