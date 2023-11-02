@@ -8,6 +8,10 @@ function App() {
   return (
     <div className="layout">
       <Header />
+      <article className="layout__title">
+        <h1>lista de personajes</h1>
+        <hr />
+      </article>
       <main className="layout__cardsContainer">
         {chars.map((character: Char) => (
           <CharacterCard
