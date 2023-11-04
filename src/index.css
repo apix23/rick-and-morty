@@ -37,3 +37,10 @@ body{
   background-color: var(--bg-color);
   color: var(--white-color);
 }
+
+@media (width <= 490px) {
+  body{
+    background-color: var(--white-color);
+    color: var(--black-color);
+  }
+}
