@@ -1,27 +1,18 @@
-# React + TypeScript + Vite
+# Rick and Morty app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application was made as a test to apply to the jump2Digital hackaton. In this you could fine state management, use of React context, handling fetch request, debounce user search and more.
 
-Currently, two official plugins are available:
+# Stack used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Vite
+React
+TypeScript
+Plane CSS
 
-## Expanding the ESLint configuration
+# How to run the project
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**note:** to follow this step is important to previusly had **Node js** and **NPM** installed.
 
-- Configure the top-level `parserOptions` property like this:
+First at all clone or fork the repository. clone it in your local machine, enter in the project folder and from the terminal executed the comand `npm intall` this will install all the needed dependencies in your local machine.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Once you have all the dependencies installed you can use the comman `npm run dev` this will run the project in developer mode and will automatically proveide you a port where you can google it and see the application. the provided URL will be **http://localhost:5173/**
