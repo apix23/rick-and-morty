@@ -6,8 +6,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    padding-bottom: 3.5rem;
+    padding-bottom: 1.5rem;
     border-radius: 10px;
+    gap: 0.5rem;
+    white-space: nowrap;
 }
 
 
@@ -21,7 +23,22 @@
 .card__info{
     display: flex;
     gap: 0.5rem;
+    align-items: center;
 }
+.card__name{
+    font-size: 1.5rem;
+}
+
+.card__info > h6{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card__planet{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
 .card__info__status{
     width: 10px;
     height: 10px;
@@ -38,4 +55,10 @@
 
 .card--unknown{
     background-color: grey;
+}
+
+@media (width < 660px) {
+    .card__image{
+        width: 180px;
+     }
 }
