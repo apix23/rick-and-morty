@@ -1,6 +1,7 @@
 import "./App.css";
 import { CharacterCard } from "./components/CharacterCard";
 import { Header } from "./components/Header";
+import { SearchChar } from "./components/SearchChar";
 import { Char, useChars } from "./hooks/useChars";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="layout">
       <Header />
+      <SearchChar />
       <article className="layout__title">
         <h1>lista de personajes</h1>
         <hr />
