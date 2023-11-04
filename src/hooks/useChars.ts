@@ -1,35 +1,35 @@
 import { useEffect, useState } from "react";
 import { fetchCharData } from "../services/fetchCharData";
-
-export type Char = {
-  id: number;
-  name: string;
-  status: string;
-  species: string;
-  image: string;
-  origin: string;
-};
-
-type fetchCharType = Omit<Char, "origin"> & { origin: { name: string } };
-
+import { mapperChar } from "../utils/mapperChar";
+import { Char } from "../types/Characters";
 export const useChars = () => {
-  const [chars, setChars] = useState([]);
+  const [chars, setChars] = useState<Char[]>([]);
+  const [userSearch, setuserSearch] = useState("");
   useEffect(() => {
     fetchCharData("https://rickandmortyapi.com/api/character").then(
-      (character) => {
-        const characters = character.results.map(
-          (char: fetchCharType): Char => ({
-            id: char.id,
-            name: char.name,
-            status: char.status,
-            species: char.species,
-            image: char.image,
-            origin: char.origin.name,
-          })
-        );
-        setChars(characters);
+      ({ results: characters }) => {
+        setChars(mapperChar(characters));
       }
     );
   }, []);
-  return { chars };
+
+  useEffect(() => {
+    console.log("chars", chars);
+  }, [chars]);
+
+  const searchChar = (search: string) => {
+    setuserSearch(search);
+  };
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      fetchCharData(
+        `https://rickandmortyapi.com/api/character/?name=${userSearch}`
+      ).then(({ results: characters }) => {
+        setChars(mapperChar(characters));
+      });
+    }, 300);
+    return () => clearTimeout(timeoutId);
+  }, [userSearch]);
+
+  return { chars, searchChar, userSearch };
 };
