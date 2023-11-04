@@ -33,7 +33,6 @@
   right: 10px;
   border: none;
   background-color: transparent;
-  cursor: pointer;
 }
 
 @media (width < 490px) {
