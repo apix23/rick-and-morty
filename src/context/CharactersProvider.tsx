@@ -6,9 +6,9 @@ type Props = {
 };
 
 export const CharactersProvider = ({ children }: Props) => {
-  const { chars, searchChar } = useChars();
+  const { chars, searchChar, userSearch } = useChars();
   return (
-    <charsContext.Provider value={{ chars, searchChar }}>
+    <charsContext.Provider value={{ chars, searchChar, userSearch }}>
       {children}
     </charsContext.Provider>
   );
