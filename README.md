@@ -16,3 +16,7 @@ Plane CSS
 First at all clone or fork the repository. clone it in your local machine, enter in the project folder and from the terminal executed the comand `npm intall` this will install all the needed dependencies in your local machine.
 
 Once you have all the dependencies installed you can use the comman `npm run dev` this will run the project in developer mode and will automatically proveide you a port where you can google it and see the application. the provided URL will be **http://localhost:5173/**
+
+## Demo website
+
+https://effervescent-sopapillas-9533fa.netlify.app
