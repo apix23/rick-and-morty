@@ -1,9 +1,8 @@
-import { useContext } from "react";
 import "./SearchChar.css";
-import { charsContext } from "../../context/charContext";
+import { useCharsContext } from "../../context/charContext";
 
 export const SearchChar = () => {
-  const { userSearch, searchChar } = useContext(charsContext);
+  const { userSearch, searchChar } = useCharsContext();
   return (
     <form className="search">
       <input

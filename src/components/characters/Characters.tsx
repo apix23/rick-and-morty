@@ -1,11 +1,10 @@
 import "./Characters.css";
 import { CharacterCard } from "../card/CharacterCard";
 import { Char } from "../../types/Characters";
-import { useContext } from "react";
-import { charsContext } from "../../context/charContext";
+import { useCharsContext } from "../../context/charContext";
 
 export const Characters = () => {
-  const { chars } = useContext(charsContext);
+  const { chars } = useCharsContext();
 
   return (
     <main className="layout__cardsContainer">
